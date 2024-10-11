@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #404040;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+a {
+  color: #487eb0;
+  text-decoration: none;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent; /* Remove gray background on tap */
+  outline: none; /* Remove default outline */
+  background-color: transparent; /* Remove background color */
+  box-shadow: none; /* Remove default box shadow */
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: black;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: black;
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+P {
+  margin-bottom: 12px;
+}
+
+ol {
+  margin-left: 40px;
+}

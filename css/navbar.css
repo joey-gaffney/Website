@@ -1,0 +1,42 @@
+.toggle-menu {
+  display: none;
+}
+
+.nav-wrapper {
+  position: fixed;
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+  background-color: #fff;
+}
+
+nav {
+  height: 90px;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  transition: height 0.3s ease;
+}
+
+.nav-links {
+  display: flex;
+  height: 100%;
+}
+
+.nav-links-item,
+.nav-links-link {
+  list-style-type: none;
+  text-decoration: none;
+  display: inline-block;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0rem 0.5rem;
+  color: rgba(0, 0, 0, 0.6);
+  transition: all 0.3s;
+}
+
+.nav-links li a:hover {
+  color: black;
+}

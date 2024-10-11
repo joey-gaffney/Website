@@ -1,0 +1,115 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+
+  z-index: 1000;
+}
+
+.modal-overlay.is-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-overlay.is-active .modal-container {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.modal-container {
+  background-color: #fff;
+  padding: 12px;
+  padding: 2rem;
+  margin: 12px;
+  max-width: 500px;
+  position: relative;
+  text-align: center;
+  font-size: 1rem;
+  transform: scale(0.9);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.modal-container a {
+  margin: 0px 12px;
+}
+
+.close-btn {
+  position: absolute;
+  top: -50px;
+  right: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  height: 40px;
+  width: 40px;
+  background-color: #fff;
+  outline: none;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  opacity: 0; /* Initially hidden */
+  /* transform: translateY(0); */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.close-btn.is-visible {
+  opacity: 1; /* Fully visible */
+  /* transform: translateY(0); */
+  animation: bounceIn 0.6s ease forwards; /* Apply bounce animation */
+}
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.5) translateY(0); /* Start smaller and higher */
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2) translateY(0); /* Overshoot slightly */
+    opacity: 1;
+  }
+  70% {
+    transform: scale(0.9) translateY(0); /* Bounce back */
+  }
+  100% {
+    transform: scale(1) translateY(0); /* Settle in final position */
+  }
+}
+
+.close-btn span {
+  width: 100%;
+  height: 2px;
+  transition: all 0.3s;
+  background-color: black;
+}
+.close-btn .line1 {
+  transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.close-btn .line2 {
+  opacity: 0;
+}
+
+.close-btn .line3 {
+  transform: rotate(45deg) translate(-5px, -5px);
+}
+
+#modal-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 12px;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.modal-h2 {
+  margin-bottom: 12px;
+}

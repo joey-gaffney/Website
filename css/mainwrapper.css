@@ -1,0 +1,26 @@
+.main-wrapper {
+  flex: 1;
+  min-height: calc(100vh - 90px);
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 140px 0px 70px 0px;
+}
+
+.header-div {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  margin-bottom: 20px;
+}
+
+.heroImg {
+  height: 100px;
+  min-width: 80px;
+  max-width: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.projects-main-wrapper {
+  margin-top: 40px;
+}
